@@ -19,14 +19,12 @@ const geistMono = Geist_Mono({
 const menu = {
   en: [
     { label: "Home", href: "#home" },
-    { label: "Tours", href: "#tours" },
     { label: "Gallery", href: "#gallery" },
     { label: "Reviews", href: "#reviews" },
     { label: "Contact", href: "#contact" },
   ],
   tr: [
     { label: "Anasayfa", href: "#home" },
-    { label: "Turlar", href: "#tours" },
     { label: "Galeri", href: "#gallery" },
     { label: "Yorumlar", href: "#reviews" },
     { label: "İletişim", href: "#contact" },
@@ -53,7 +51,7 @@ function LayoutContent({ children }: { children: React.ReactNode }) {
           <div className="nav-container">
             <a href="#home" className="logo">
               <div className="logo-icon">⛵</div>
-              <span>Fethiye Boat Tour</span>
+              <span>Fethiye Boat Tours</span>
             </a>
             <nav>
               <ul className="nav-menu">

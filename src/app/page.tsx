@@ -10,6 +10,7 @@ const galleryImages = [
   "/boat-tour-images/fethiye-private-boat-tour-5.jpeg",
   "/boat-tour-images/fethiye-12-island-tour-1.jpeg",
   "/boat-tour-images/fethiye-12-island-tour-2.jpeg",
+  "/boat-tour-images/fethiye-boat-tour-scenery-5.png"
 ];
 
 const testimonials = [
@@ -32,7 +33,7 @@ const testimonials = [
 
 const galleryContent = [
   {
-    image: galleryImages[0],
+    image: "/boat-tour-images/fethiye-boat-tour-scenery-7.png",
     en: {
       title: "Big Aquarium",
       desc: "A favorite swimming and snorkeling stop, Big Aquarium Bay is famous for its crystal-clear, turquoise waters teeming with marine life. The bay's calm, sheltered setting makes it perfect for families and those who want to spot colorful fish in a natural 'aquarium' environment. The vibrant underwater world and gentle waves create an unforgettable swimming experience.",
@@ -58,7 +59,7 @@ const galleryContent = [
     }
   },
   {
-    image: galleryImages[2],
+    image: "/boat-tour-images/fethiye-boat-tour-scenery-5.png",
     en: {
       title: "Orange Spring",
       desc: "Orange Spring Bay is famous for its unique orange-tinted waters and natural thermal springs. This distinctive bay offers a one-of-a-kind swimming experience with warm, mineral-rich waters that are believed to have therapeutic properties. The stunning orange hue creates a magical atmosphere perfect for relaxation and rejuvenation.",
@@ -279,9 +280,6 @@ export default function Home() {
           <h1 className="hero-title">{content[lang].hero.title}</h1>
           <p className="hero-subtitle" style={{ color: '#fff' }}>{content[lang].hero.subtitle}</p>
           <div className="hero-cta">
-            <a href="#contact" className="btn btn-primary">
-              {content[lang].hero.cta1}
-            </a>
             <a href="#gallery" className="btn btn-secondary">
               {content[lang].hero.cta2}
             </a>
@@ -298,7 +296,7 @@ export default function Home() {
           <div className="gallery-grid">
             {galleryContent.map((item, index) => (
               <div key={index} className="gallery-card">
-          <Image
+                <Image
                   src={item.image}
                   alt={item[lang].title}
                   width={400}
@@ -308,9 +306,6 @@ export default function Home() {
                 <div className="gallery-content">
                   <h3 className="gallery-title">{item[lang].title}</h3>
                   <p className="gallery-description">{item[lang].desc}</p>
-                  <a href="#" className="gallery-cta">
-                    {item[lang].cta} →
-                  </a>
                 </div>
               </div>
             ))}
@@ -380,12 +375,38 @@ export default function Home() {
             <div className="footer-section">
               <h3>{content[lang].footer.business.name}</h3>
               <p>{content[lang].footer.business.description}</p>
-              <div className="social-links">
-                <a href="#" className="social-link">📱</a>
-                <a href="#" className="social-link">📘</a>
-                <a href="#" className="social-link">📷</a>
-                <a href="#" className="social-link">🌐</a>
-              </div>
+              <a
+                href="https://www.instagram.com/demirbey.48?igsh=MThxaDNtOHZsNnB5Yw=="
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 8,
+                  background: 'linear-gradient(135deg, #f9ce34 0%, #ee2a7b 50%, #6228d7 100%)',
+                  color: '#fff',
+                  borderRadius: 24,
+                  padding: '8px 16px',
+                  fontWeight: 600,
+                  textDecoration: 'none',
+                  marginTop: 16,
+                }}
+                aria-label="Instagram"
+              >
+                <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="4" y="4" width="24" height="24" rx="8" fill="url(#ig-gradient-footer)"/>
+                  <defs>
+                    <linearGradient id="ig-gradient-footer" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+                      <stop stopColor="#f9ce34"/>
+                      <stop offset="0.5" stopColor="#ee2a7b"/>
+                      <stop offset="1" stopColor="#6228d7"/>
+                    </linearGradient>
+                  </defs>
+                  <circle cx="16" cy="16" r="6" stroke="#fff" strokeWidth="2"/>
+                  <circle cx="22" cy="10" r="1.5" fill="#fff"/>
+                </svg>
+                Instagram
+              </a>
             </div>
             
             <div className="footer-section">
@@ -401,13 +422,8 @@ export default function Home() {
             <div className="footer-section">
               <h3>{content[lang].footer.contact}</h3>
               <p>📍 Fethiye, Muğla, Turkey</p>
-              <p>📞 +90 536 222 2813</p>
-              <p>✉️ info@oludeniztours.com</p>
-              <div style={{ marginTop: '1rem' }}>
-                <a href="https://wa.me/905362228813" className="btn btn-primary" style={{ fontSize: '0.875rem', padding: '0.5rem 1rem' }}>
-                  💬 WhatsApp
-                </a>
-              </div>
+              <p>📞 +90 530 054 33 05</p>
+              <p>✉️ fethiyeboattours@gmail.com</p>
             </div>
           </div>
           
@@ -416,6 +432,42 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      {/* Contact Section for anchor scroll */}
+      <section id="contact" className="section" style={{ background: '#f8fafc', paddingTop: 40, paddingBottom: 40 }}>
+        <div className="container" style={{ textAlign: 'center' }}>
+          <h2>{content[lang].footer.contact}</h2>
+        </div>
+      </section>
+
+      {/* WhatsApp Floating Button */}
+      <a
+        href="https://wa.me/905300543305"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          position: 'fixed',
+          bottom: 24,
+          right: 24,
+          zIndex: 2000,
+          background: '#25D366',
+          color: '#fff',
+          borderRadius: '50%',
+          width: 60,
+          height: 60,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          boxShadow: '0 4px 16px rgba(0,0,0,0.15)',
+          fontSize: 32,
+          textDecoration: 'none',
+        }}
+        aria-label="WhatsApp"
+      >
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="16" cy="16" r="16" fill="#25D366"/>
+          <path d="M23.472 18.294c-.355-.177-2.096-1.034-2.42-1.153-.324-.118-.56-.177-.797.177-.236.355-.914 1.153-1.12 1.39-.206.236-.412.266-.767.089-.355-.178-1.5-.553-2.86-1.763-1.057-.944-1.77-2.108-1.98-2.463-.206-.355-.022-.546.154-.723.158-.157.355-.412.533-.619.178-.206.236-.354.355-.59.118-.236.06-.443-.03-.62-.089-.177-.797-1.92-1.09-2.63-.287-.689-.58-.595-.797-.606-.206-.009-.443-.011-.68-.011-.236 0-.62.089-.944.443-.324.355-1.23 1.202-1.23 2.927 0 1.724 1.26 3.389 1.435 3.624.177.236 2.48 3.786 6.006 5.153.84.289 1.494.462 2.004.591.842.214 1.61.184 2.217.112.676-.08 2.096-.857 2.393-1.687.295-.83.295-1.541.206-1.687-.089-.147-.324-.236-.68-.413z" fill="#fff"/>
+        </svg>
+      </a>
     </div>
   );
 }
