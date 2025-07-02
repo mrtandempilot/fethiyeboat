@@ -226,12 +226,12 @@ export default function Home() {
       },
       footer: {
         business: {
-          name: "Ölüdeniz Boat Tours",
+          name: "Fethiye Boat Tours",
           description: "Experience the most beautiful bays and hidden gems of the Fethiye coastline with our professional crew and comfortable boats."
         },
         quickLinks: "Quick Links",
         contact: "Contact Info",
-        copyright: "© 2024 Ölüdeniz Boat Tours. All rights reserved."
+        copyright: "© 2024 Fethiye Boat Tours. All rights reserved."
       }
     },
     tr: {
@@ -251,12 +251,12 @@ export default function Home() {
       },
       footer: {
         business: {
-          name: "Ölüdeniz Tekne Turları",
+          name: "Fethiye Tekne Turları",
           description: "Profesyonel mürettebatımız ve konforlu teknelerimizle Fethiye sahil şeridinin en güzel koylarını ve gizli mücevherlerini deneyimleyin."
         },
         quickLinks: "Hızlı Bağlantılar",
         contact: "İletişim Bilgileri",
-        copyright: "© 2024 Ölüdeniz Tekne Turları. Tüm hakları saklıdır."
+        copyright: "© 2024 Fethiye Tekne Turları. Tüm hakları saklıdır."
       }
     }
   };

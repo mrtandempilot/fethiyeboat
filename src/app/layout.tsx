@@ -53,7 +53,7 @@ function LayoutContent({ children }: { children: React.ReactNode }) {
           <div className="nav-container">
             <a href="#home" className="logo">
               <div className="logo-icon">⛵</div>
-              <span>Ölüdeniz Tours</span>
+              <span>Fethiye Boat Tours</span>
             </a>
             <nav>
               <ul className="nav-menu">
