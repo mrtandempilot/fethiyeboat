@@ -280,7 +280,10 @@ export default function Home() {
           <h1 className="hero-title">{content[lang].hero.title}</h1>
           <p className="hero-subtitle" style={{ color: '#fff' }}>{content[lang].hero.subtitle}</p>
           <div className="hero-cta">
-            <a href="#gallery" className="btn btn-secondary">
+            <a href="https://wa.me/905300543305" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+              {content[lang].hero.cta1}
+            </a>
+            <a href="/gallery" className="btn btn-secondary">
               {content[lang].hero.cta2}
             </a>
           </div>
