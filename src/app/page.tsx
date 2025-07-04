@@ -378,38 +378,75 @@ export default function Home() {
             <div className="footer-section">
               <h3>{content[lang].footer.business.name}</h3>
               <p>{content[lang].footer.business.description}</p>
-              <a
-                href="https://www.instagram.com/demirbey.48?igsh=MThxaDNtOHZsNnB5Yw=="
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: 8,
-                  background: 'linear-gradient(135deg, #f9ce34 0%, #ee2a7b 50%, #6228d7 100%)',
-                  color: '#fff',
-                  borderRadius: 24,
-                  padding: '8px 16px',
-                  fontWeight: 600,
-                  textDecoration: 'none',
-                  marginTop: 16,
-                }}
-                aria-label="Instagram"
-              >
-                <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="4" y="4" width="24" height="24" rx="8" fill="url(#ig-gradient-footer)"/>
-                  <defs>
-                    <linearGradient id="ig-gradient-footer" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
-                      <stop stopColor="#f9ce34"/>
-                      <stop offset="0.5" stopColor="#ee2a7b"/>
-                      <stop offset="1" stopColor="#6228d7"/>
-                    </linearGradient>
-                  </defs>
-                  <circle cx="16" cy="16" r="6" stroke="#fff" strokeWidth="2"/>
-                  <circle cx="22" cy="10" r="1.5" fill="#fff"/>
-                </svg>
-                Instagram
-              </a>
+              <div style={{ display: 'flex', gap: '12px', marginTop: 16 }}>
+                <a
+                  href="https://www.instagram.com/demirbey.48?igsh=MThxaDNtOHZsNnB5Yw=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: 8,
+                    background: 'linear-gradient(135deg, #f9ce34 0%, #ee2a7b 50%, #6228d7 100%)',
+                    color: '#fff',
+                    borderRadius: 24,
+                    padding: '8px 16px',
+                    fontWeight: 600,
+                    textDecoration: 'none',
+                  }}
+                  aria-label="Instagram"
+                >
+                  <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="4" y="4" width="24" height="24" rx="8" fill="url(#ig-gradient-footer)"/>
+                    <defs>
+                      <linearGradient id="ig-gradient-footer" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+                        <stop stopColor="#f9ce34"/>
+                        <stop offset="0.5" stopColor="#ee2a7b"/>
+                        <stop offset="1" stopColor="#6228d7"/>
+                      </linearGradient>
+                    </defs>
+                    <circle cx="16" cy="16" r="6" stroke="#fff" strokeWidth="2"/>
+                    <circle cx="22" cy="10" r="1.5" fill="#fff"/>
+                  </svg>
+                  Instagram
+                </a>
+                <a
+                  href="https://www.tripadvisor.com.tr/UserReviewEdit-g1221512-d33301493-Fethiye_Boat_Tours-Mugla_Mugla_Province_Turkish_Aegean_Coast.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: 10,
+                    background: '#fff',
+                    color: '#222',
+                    borderRadius: 24,
+                    padding: '8px 18px 8px 8px',
+                    fontWeight: 600,
+                    textDecoration: 'none',
+                    boxShadow: '0 2px 8px rgba(0,0,0,0.07)',
+                    border: '1px solid #e5e7eb',
+                    minWidth: 0,
+                    maxWidth: '100%',
+                  }}
+                  aria-label="TripAdvisor Review"
+                >
+                  <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 32, height: 32, background: '#59bfa3', borderRadius: '50%' }}>
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#59bfa3"/>
+                      <g>
+                        <ellipse cx="7" cy="11" rx="4" ry="5" fill="#fff"/>
+                        <ellipse cx="15" cy="11" rx="4" ry="5" fill="#fff"/>
+                        <circle cx="7" cy="11" r="2" fill="#222"/>
+                        <circle cx="15" cy="11" r="2" fill="#222"/>
+                      </g>
+                    </svg>
+                  </span>
+                  <span style={{ fontWeight: 700, fontSize: 14, color: '#222' }}>
+                    {lang === 'en' ? 'Review us on Tripadvisor' : 'Bizi Tripadvisor\'da değerlendirin'}
+                  </span>
+                </a>
+              </div>
             </div>
             
             <div className="footer-section">
@@ -477,9 +514,11 @@ export default function Home() {
         }}
       >
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M16 3C9.373 3 4 8.373 4 15c0 2.647.86 5.1 2.34 7.09L4.5 29.5l7.61-1.99A12.94 12.94 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3Zm0 22.5c-1.47 0-2.89-.27-4.22-.8l-.3-.12-4.52 1.18 1.2-4.4-.19-.29A10.47 10.47 0 0 1 5.5 15c0-5.8 4.7-10.5 10.5-10.5S26.5 9.2 26.5 15 21.8 25.5 16 25.5Zm5.13-7.13c-.28-.14-1.65-.81-1.9-.9-.25-.09-.43-.14-.61.14-.18.27-.7.9-.86 1.08-.16.18-.32.2-.6.07-.28-.14-1.18-.43-2.25-1.37-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.29-.34.43-.51.14-.17.18-.29.27-.48.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.62-.47-.16-.01-.34-.01-.53-.01-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27 0 1.34.98 2.62 1.12 2.8.14.18 2 3.18 4.85 4.32.68.28 1.21.45 1.62.58.68.22 1.3.19 1.79.13.55-.07 1.7-.68 1.94-1.34.24-.66.24-1.23.17-1.34-.07-.11-.25-.18-.53-.32Z" fill="#fff"/>
+          <path d="M16 3C9.373 3 4 8.373 4 15c0 2.647.86 5.1 2.34 7.09L4.5 29.5l7.61-1.99A12.94 12.94 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3Zm0 22.5c-1.47 0-2.89-.27-4.22-.8l-.3-.12-4.52 1.18 1.2-4.4-.19-.29A10.47 10.47 0 0 1 5.5 15c0-5.8 4.7-10.5 10.5-10.5S26.5 9.2 26.5 15 21.8 25.5 16 25.5Zm5.13-7.13c-.28-.14-1.65-.81-1.9-.9-.25-.09-.43-.14-.61.14-.18.27-.28-.7.9-.86 1.08-.16.18-.32.2-.6.07-.28-.14-1.18-.43-2.25-1.37-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.29-.34.43-.51.14-.17.18-.29.27-.48.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.62-.47-.16-.01-.34-.01-.53-.01-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27 0 1.34.98 2.62 1.12 2.8.14.18 2 3.18 4.85 4.32.68.28 1.21.45 1.62.58.68.22 1.3.19 1.79.13.55-.07 1.7-.68 1.94-1.34.24-.66.24-1.23.17-1.34-.07-.11-.25-.18-.53-.32Z" fill="#fff"/>
         </svg>
       </a>
+
+
     </div>
   );
 }
