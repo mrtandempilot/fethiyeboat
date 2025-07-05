@@ -736,3 +736,100 @@ p {
     min-height: auto;
   }
 }
+
+/* Hamburger styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+.hamburger-bar {
+  width: 26px;
+  height: 3px;
+  background: var(--accent-gold);
+  margin: 3px 0;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+/* Mobile nav drawer */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80vw;
+  max-width: 320px;
+  height: 100vh;
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+  box-shadow: var(--shadow-heavy);
+  z-index: 1050;
+  transform: translateX(100%);
+  transition: transform 0.3s;
+  padding: 90px 32px 32px 32px;
+}
+.mobile-nav.open {
+  display: block;
+  transform: translateX(0);
+}
+.mobile-nav .nav-menu {
+  display: flex !important;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.mobile-nav .nav-link {
+  font-size: var(--font-size-xl);
+  padding: var(--spacing-sm) 0;
+}
+.mobile-lang {
+  margin-top: var(--spacing-xl);
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: var(--spacing-sm);
+}
+
+/* Responsive: Hide desktop nav, show hamburger/mobile nav on mobile */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .mobile-nav {
+    display: none;
+  }
+  .mobile-nav.open {
+    display: block;
+  }
+  .language-selector {
+    display: none;
+  }
+  .mobile-lang {
+    display: flex;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-nav,
+  .hamburger,
+  .mobile-lang {
+    display: none !important;
+  }
+  .desktop-nav {
+    display: block;
+  }
+  .language-selector {
+    display: flex;
+  }
+}
